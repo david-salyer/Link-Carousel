@@ -12,5 +12,5 @@ https://example.com
 
 https://example.com
 
-X Another Viewed Link
+Another Viewed Link X
 https://example.com
