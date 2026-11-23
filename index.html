@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Carousel</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎠</text></svg>">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <div id="copy-alert">Link Copied to Clipboard</div>
+
+    <div class="container" id="main-container">
+        <!-- Top Progress Bar Track & Fill -->
+        <div class="progress-track track-top" id="track-top" style="display: none;">
+            <div id="progress-top" class="progress-bar progress-top"></div>
+        </div>
+
+        <!-- Bottom Progress Bar Track & Fill -->
+        <div class="progress-track track-bottom" id="track-bottom" style="display: none;">
+            <div id="progress-bottom" class="progress-bar progress-bottom"></div>
+        </div>
+
+        <!-- Upper Left & Right Indicators & Delete -->
+        <div class="stat-counter counter-left" id="counter-left" style="display: none;"><span id="left-text">1/#</span><span class="material-symbols-outlined icon counter">visibility</span></div>
+        <div class="stat-counter counter-center" id="counter-center" style="display: none;"><span class="material-symbols-outlined" id="delete-top-btn" title="Remove Slide From List" onclick="removeSlide()">delete</span></div>
+        <div class="stat-counter counter-right" id="counter-right" style="display: none;"><span id="congrats">🎉</span><span class="material-symbols-outlined icon counter">check</span><span id="right-text">0%</span></div>
+
+        <!-- Upload View -->
+        <div id="upload-screen">
+            <button class="upload-btn" onclick="document.getElementById('file-input').click()">upload file</button>
+            <div class="drop-zone-text">or drag and drop your .txt file here</div>
+            <input type="file" id="file-input" accept=".txt" style="display: none;" onchange="handleFileSelect(event)">
+
+            <div class="secondary-option">
+                <button class="paste-toggle-btn" onclick="togglePasteArea()">paste links manually</button>
+                <div id="paste-container">
+                    <textarea id="paste-textarea" placeholder="Paste your link list here..."></textarea>
+                    <button class="submit-paste-btn" onclick="handlePasteSubmit()">Load Pasted Links</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel View -->
+        <div id="carousel-screen" style="display: none;">
+            <h2 id="link-title">Loading...</h2>
+            <div class="button-group">
+                <button id="first-btn" onclick="firstSlide()" title="First"><span class="material-symbols-outlined icon">first_page</span></button>
+                <button id="prev-btn" onclick="changeSlide(-1)" title="Previous"><span class="material-symbols-outlined icon">fast_rewind</span></button>
+                <button id="open-btn" onclick="openLink()" title="Open Link"><span class="material-symbols-outlined icon">play_arrow</span></button>
+                <button id="next-btn" onclick="changeSlide(1)" title="Next"><span class="material-symbols-outlined icon">fast_forward</span></button>
+                <button id="last-btn" onclick="lastSlide()" title="Last"><span class="material-symbols-outlined icon">last_page</span></button>
+            </div>
+        </div>
+
+        <!-- Bottom Left/Center/Right Action Icons -->
+        <span class="material-symbols-outlined bottom-action" id="reupload-btn" title="Upload Another File" onclick="triggerReupload()">upload</span>
+        <span class="material-symbols-outlined bottom-action" id="undo-bottom-btn" title="Mark as Unseen" onclick="markAsUnseen()">undo</span>
+        <span class="material-symbols-outlined bottom-action" id="download-btn" title="Download Progress" onclick="downloadProgress()">download</span>
+    </div>
+
+    <!-- Hidden file input for re-uploading -->
+    <input type="file" id="reupload-input" accept=".txt" style="display: none;" onchange="handleFileSelect(event)">
+    <script src="script.js"></script>
+</body>
+</html>

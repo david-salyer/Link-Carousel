@@ -1,0 +1,70 @@
+GH-900 Training
+
+X Introduction to Git
+https://learn.microsoft.com/en-us/training/modules/intro-to-git/
+
+X Introduction to GitHub
+https://learn.microsoft.com/en-us/training/modules/introduction-to-github/
+
+X Introduction to
+GitHub's products
+https://learn.microsoft.com/en-us/training/modules/github-introduction-products/
+
+X Configure code scanning on GitHub
+https://learn.microsoft.com/en-us/training/modules/configure-code-scanning/
+
+X Introduction to GitHub Copilot
+https://learn.microsoft.com/en-us/training/modules/introduction-to-github-copilot/
+
+X Code with GitHub Codespaces
+https://learn.microsoft.com/en-us/training/modules/code-with-github-codespaces/
+
+X Manage your work
+with GitHub Projects
+https://learn.microsoft.com/en-us/training/modules/manage-work-github-projects/
+
+X Communicate effectively
+on GitHub using Markdown
+https://learn.microsoft.com/en-us/training/modules/communicate-using-markdown/
+
+X Contribute to an open-source
+project on GitHub
+https://learn.microsoft.com/en-us/training/modules/contribute-open-source/
+
+X Manage an InnerSource
+program by using GitHub
+https://learn.microsoft.com/en-us/training/modules/manage-innersource-program-github/
+
+X Maintain a secure repository
+by using GitHub best practices
+https://learn.microsoft.com/en-us/training/modules/maintain-secure-repository-github/
+
+X Introduction to GitHub administration
+https://learn.microsoft.com/en-us/training/modules/github-introduction-administration/
+
+X Authenticate and authorize
+user identities on GitHub
+https://learn.microsoft.com/en-us/training/modules/authenticate-authorize-user-identities-github/
+
+X Manage repository changes
+by using pull requests on GitHub
+https://learn.microsoft.com/en-us/training/modules/manage-changes-pull-requests-github/
+
+X Search and organize repository history
+by using GitHub
+https://learn.microsoft.com/en-us/training/modules/search-organize-repository-history-github/
+
+X Using GitHub Copilot with Python
+https://learn.microsoft.com/en-us/training/modules/introduction-copilot-python/
+
+Study Guide
+https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/gh-900
+
+Practice Test
+https://ghcertified.com/en
+
+Cheat Sheet
+https://masteryexamprep.com/exams/github/gh-900/cheat-sheet/
+
+X YouTube Playlist
+https://www.youtube.com/playlist?list=PLahhVEj9XNTf5iQVK_80RdvTju7ov6RYy

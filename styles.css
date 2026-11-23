@@ -1,0 +1,264 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
+}
+.container {
+    position: relative;
+    text-align: center;
+    background: white;
+    padding: 45px 30px 35px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    width: 100%;
+    overflow: hidden;
+}
+.stat-counter {
+    position: absolute;
+    top: 14px;
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: bold;
+}
+.counter-left {left: 15px;}
+.counter-right {right: 15px;}
+.counter-center {
+    left:0px;
+    right:0px;
+    margin:auto;
+}
+.progress-track {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #e9ecef;
+}
+.track-top {top: 0;}
+.track-bottom {bottom: 0;}
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    transition: width 0.4s ease-in-out;
+}
+.progress-top {background-color: #28a745;}
+.progress-bottom {background-color: #007bff;}
+h2 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333;
+    min-height: 2.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+button {
+    padding: 10px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    transition: background-color 0.2s;
+}
+button#first-btn,
+button#prev-btn,
+button#next-btn,
+button#last-btn {
+    background-color: #007bff;
+}
+button#open-btn {background-color: #28a745;}
+button#first-btn:hover,
+button#prev-btn:hover,
+button#next-btn:hover,
+button#last-btn:hover {
+    background-color: #0056b3;
+}
+button#open-btn:hover {background-color: #196a2c;}
+button:disabled {
+    background-color: #cccccc !important;
+    cursor: not-allowed;
+}
+/* Grey style for opened pages */
+.greyed {background-color: #cccccc !important;}
+.greyed:hover {background-color: #b3b3b3 !important;}
+.icon.counter {
+    font-size: 17pt;
+    vertical-align: -6.5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.counter-left > .icon {color: #007bff;}
+.counter-right > .icon {color: #28a745;}
+#link-title {white-space: pre-line;}
+
+/* Upload Screen Styling */
+#upload-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    margin-bottom: -36px;
+}
+.upload-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+.upload-btn:hover {
+    background-color: #0056b3;
+}
+.upload-btn:active {
+    transform: scale(0.98);
+}
+.drop-zone-text {
+    margin-top: 15px;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+/* Secondary Paste Option */
+.secondary-option {
+    margin-top: 15px;
+    border-top: 1px solid #eee;
+    padding-top: 5px;
+    width: 100%;
+}
+.paste-toggle-btn {
+    background: none;
+    border: none;
+    color: #777;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 4px;
+    transition:0.3s ease;
+}
+.paste-toggle-btn:hover {
+    color: #333;
+    transition:0.3s ease;
+}
+#paste-container {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
+textarea {
+    width: 100%;
+    height: 110px;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.85rem;
+    resize: vertical;
+}
+.submit-paste-btn {
+    margin-top: 8px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+.submit-paste-btn:hover {
+    background-color: #5a6268;
+}
+        
+/* Bottom Corner Icons & Center Bottom Undo */
+.bottom-action {
+    position: absolute;
+    bottom: 12px;
+    cursor: pointer;
+    color: #777;
+    transition: color 0.2s;
+    display: none;
+    z-index: 10;
+    transition: 0.3s ease;
+}
+.bottom-action:hover {
+    color: #333;
+    transition: 0.3s ease;
+}
+#reupload-btn {left: 15px;}
+#undo-bottom-btn {
+    left: 50%;
+    transform: translateX(-50%) translateY(5px);
+    display: none;
+}
+#delete-top-btn {
+    display: none;
+    width: 24px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+#download-btn {right: 15px;}
+        
+/* Drag and Drop Over Effect */
+body.drag-over {
+    background-color: #e2e8f0;
+}
+
+#main-container:has(#carousel-screen #open-btn.greyed) #undo-bottom-btn,
+#main-container:has(#carousel-screen #open-btn.greyed) #delete-top-btn {
+    display: block !important;
+    cursor: pointer;
+}
+.button-group>button>span {transform: translateY(2px);}
+#congrats{
+    transform: scaleX(-1);
+    display: none;
+}
+.material-symbols-outlined,#congrats{
+    -webkit-user-select:none;
+    user-select:none;
+}
+#copy-alert {
+    width: 220px;
+    height: auto;
+    position: absolute;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    font-weight: bold;            padding: 12px;
+    margin: auto;
+    border-radius: 30px;
+    text-align: center;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 0s linear 1s;
+}
+#copy-alert.is-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: opacity 0s linear, visibility 0s linear;
+}

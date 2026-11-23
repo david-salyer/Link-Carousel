@@ -1,0 +1,16 @@
+Optional Title for Tab
+
+Custom Text
+https://example.com
+
+Link 2
+Optional Second Line
+https://example.com
+
+X Marked as Read
+https://example.com
+
+https://example.com
+
+X Another Viewed Link
+https://example.com
