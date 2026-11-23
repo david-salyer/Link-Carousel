@@ -42,3 +42,19 @@
 - The undo button below the play button will revert the viewed status to unseen.
 - The trash can button at the top will delete the slide from rotation.
 - If you want to copy the link for the current slide, right click the play button.
+
+
+### Formatting a File
+
+- **Tab Title**
+  - If you have a line of text at the top of the file without a link directly afterwards, this will be interpreted as the title of the file
+- **Link Title**
+  - A line of text on the line right before a URL
+  - If you want a title to have a hard return to span multiple lines, just add a hard return or to to the file title in the .txt
+  - If no title is provided the title will be sub.domain.tld
+- **Link URL**
+  - A URL on its own line
+- **Marking as Read**
+  - An 'X ' at the very beginning of a link title
+  - An ' X' at the very end of a link title
+  - An 'X ' at the very beginning of a link URL
